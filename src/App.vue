@@ -38,7 +38,7 @@
 
 <style lang='less'>
   header.mint-header{
-    background-color: greenyellow;
+    background-color: skyblue;
   }
   .app-container {
   padding-top: 40px;
