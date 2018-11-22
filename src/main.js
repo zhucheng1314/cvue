@@ -4,13 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import moment from 'moment'
+import VuePreview from 'vue2-preview'
 
 
 //导入vue-resource请求模块
 import VueResource from 'vue-resource'
 //注册vue-resource
 Vue.use(VueResource)
+//缩略图组件
+Vue.use(VuePreview) 
 
+//post 请求第三个参数默认值
+Vue.http.options.emulateJSON=true;
 //配置vue-resource的请求根域名
 Vue.http.options.root = 'http://www.lovegf.cn:8899/'
 
@@ -19,13 +24,22 @@ import {
   Header,
   Swipe,
   SwipeItem,
-  Button
+  Button,
+ 
 } from 'mint-ui'
 //注册组件
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Button.name,Button)
+
+// Vue.use(Lazyload)
+//需要用到懒加载  必须要用全导入
+// import Mintui from 'mint-ui'
+// // import 'mint-ui/lib/sytle.less'
+// Vue.use(Mintui)
+
+
 
 //导入mui的样式
 import './lib/mui/css/mui.css'
