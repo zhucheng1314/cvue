@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- 头部 -->
-      <mt-header fixed title="cvue"></mt-header>
+      <mt-header class="mt-header" fixed title="cvue"></mt-header>
       <!-- 底部菜单栏 -->
       <nav class="mui-bar mui-bar-tab">
           <!-- 先将a标签换成  router-link标签   -->
@@ -33,11 +33,14 @@
   </div>
 </template>
 
-<script>
+
+
+<script src="./snow.js">
 </script>
 
 <style lang='less'>
-  header.mint-header{
+  .mt-header{
+    z-index: 999!important;
     background-color: skyblue;
   }
   .app-container {

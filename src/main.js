@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import moment from 'moment'
 import VuePreview from 'vue2-preview'
+import LazyLoad from 'vue-lazyload'
+// import jQuery from 'jquery'
+
 
 
 //导入vue-resource请求模块
@@ -13,6 +16,13 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 //缩略图组件
 Vue.use(VuePreview) 
+
+// Vue.use(jQuery)
+// 懒加载组件
+Vue.use(LazyLoad,{
+  error:'/static/error.png',
+  loading:'/static/loading.gif'
+})
 
 //post 请求第三个参数默认值
 Vue.http.options.emulateJSON=true;
@@ -47,6 +57,8 @@ import './lib/mui/css/icons-extra.css'
 
 //导入自己的全局样式
 import './css/common.less'
+//导入jqury
+
 
 Vue.config.productionTip = false
 
